@@ -1,4 +1,6 @@
 from cjtesseract import cjtesseract
+import os
 
 obj = cjtesseract()
-print (obj.run_cjtesseract("resized_Business_Intent_slice.png"))
+os.system( "wget http://jeroen.github.io/images/testocr.png -O /tmp/test.png" )
+print (obj.run_cjtesseract("/tmp/test.png"))
